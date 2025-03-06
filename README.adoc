@@ -12,7 +12,7 @@
 :uri-openscd: https://github.com/openscd
 :uri-openscd-app: https://openscd.github.io
 :uri-openscd-core-app: https://openscd.github.io/open-scd/
-:uri-openscd-core-plugin: pass:v[https://openscd.github.io/open-scd/?plugins=%7B%22menu%22:%5B%7B%22name%22:%22Open%20File%22,%22translations%22:%7B%22de%22:%22Datei%20%C3%B6ffnen%22%7D,%22icon%22:%22folder_open%22,%22active%22:true,%22src%22:%22https://openscd.github.io/oscd-open/oscd-open.js%22%7D,%7B%22name%22:%22Save%20File%22,%22translations%22:%7B%22de%22:%22Datei%20speichern%22%7D,%22icon%22:%22save%22,%22active%22:true,%22src%22:%22https://openscd.github.io/oscd-save/oscd-save.js%22%7D%5D,%22editor%22:%5B%7B%22name%22:%22Subscriber%20Later%20Binding%22,%22translations%22:%7B%22de%22:%22Sp%C3%A4te%20Bindung%20des%20Abonnenten%22,%22pt%22:%22Associa%C3%A7%C3%A3o%20Tardia%20de%20Assinante%22%7D,%22icon%22:%22link%22,%22active%22:true,%22requireDoc%22:false,%22src%22:%22https://danyill.github.io/oscd-import-ieds/oscd-import-ieds.js%22%7D%5D%7D]
+:uri-openscd-core-plugin: pass:v[https://openscd.github.io/open-scd/?plugins=%7B%22menu%22:%5B%7B%22name%22:%22Open%20File%22,%22translations%22:%7B%22de%22:%22Datei%20%C3%B6ffnen%22%7D,%22icon%22:%22folder_open%22,%22active%22:true,%22src%22:%22https://openscd.github.io/oscd-open/oscd-open.js%22%7D,%7B%22name%22:%22Save%20File%22,%22translations%22:%7B%22de%22:%22Datei%20speichern%22%7D,%22icon%22:%22save%22,%22active%22:true,%22src%22:%22https://openscd.github.io/oscd-save/oscd-save.js%22%7D%5D,%22editor%22:%5B%7B%22name%22:%22Subscriber%20Later%20Binding%22,%22translations%22:%7B%22de%22:%22Sp%C3%A4te%20Bindung%20des%20Abonnenten%22,%22pt%22:%22Associa%C3%A7%C3%A3o%20Tardia%20de%20Assinante%22%7D,%22icon%22:%22link%22,%22active%22:true,%22requireDoc%22:false,%22src%22:%22https://danyill.github.io/oscd-update-ieds/oscd-update-ieds.js%22%7D%5D%7D]
 // TIP:
 // the above URI is done by taking the plugins object from demo.html and updating to 
 // the correct {uri-ci-bundle} value and then in the browser calling:
@@ -21,16 +21,16 @@
 // 
 // Don't forget the last bracket in the attribute definition.
 :uri-openwc: https://github.com/open-wc/open-wc
-:uri-plugin: https://github.com/danyill/oscd-import-ieds
-:uri-ci-bundle: https://danyill.github.io/oscd-import-ieds/oscd-import-ieds.js
+:uri-plugin: https://github.com/danyill/oscd-update-ieds
+:uri-ci-bundle: https://danyill.github.io/oscd-update-ieds/oscd-update-ieds.js
 :uri-material-icons: https://fonts.google.com/icons
-:uri-openscd-core-plugin-demo: https://danyill.github.io/oscd-import-ieds/index.deploy.html
+:uri-openscd-core-plugin-demo: https://danyill.github.io/oscd-update-ieds/index.deploy.html
 :uri-addon-plugin-siemens: https://github.com/danyill/oscd-subscriber-lb-siemens
 :uri-addon-plugin-sel: https://github.com/danyill/oscd-subscriber-lb-sel
 :uri-addon-plugin-nr: https://github.com/danyill/oscd-subscriber-lb-nr
 
 // badges
-image:https://github.com/danyill/oscd-import-ieds/actions/workflows/test.yml/badge.svg[title='Build Status']
+image:https://github.com/danyill/oscd-update-ieds/actions/workflows/test.yml/badge.svg[title='Build Status']
 image:https://img.shields.io/badge/built%20with-open--wc-blue.svg[link={uri-openwc},title='Built with open-wc recommendations']
 image:https://img.shields.io/badge/LF%20Energy%20Slack-%20%23OpenSCD%20chat-purple?logo=slack&color=2aa198&labelColor=6c71c4[link=https://lfenergy.slack.com/archives/C03LH7EUP34,title='Slack LF Energy']
 
@@ -140,7 +140,7 @@ Each plugin appears in the following form:
 ----
 <.> Name of the plugin which appears in the editor menu at top of screen
 <.> URL which can be a local or remote resource. 
-For a local resource, begins without a forward slash, e.g. `plugins/oscd-import-ieds/dist/oscd-import-ieds.js`. 
+For a local resource, begins without a forward slash, e.g. `plugins/oscd-update-ieds/dist/oscd-update-ieds.js`. 
 In this case what is shown is loading a plugin from the build process.
 <.> A material icon, see others at {uri-material-icons}[Material Symbols and Icons]
 <.> Whether the plugin is enabled by default or has to be enabled in the plugins menu
@@ -170,7 +170,7 @@ Within an OpenSCD core distribution, plugins are also loaded from a json file wi
   ],
   "editor": 
   [
-    {"name": "Subscriber Later Binding", "translations": {"de": "Späte Bindung des Abonnenten", "pt": "Associação Tardia de Assinante"}, "icon": "link", "active": true, "requireDoc": true, "src": "/plugins/oscd-import-ieds/dist/oscd-import-ieds.js"}
+    {"name": "Subscriber Later Binding", "translations": {"de": "Späte Bindung des Abonnenten", "pt": "Associação Tardia de Assinante"}, "icon": "link", "active": true, "requireDoc": true, "src": "/plugins/oscd-update-ieds/dist/oscd-update-ieds.js"}
   ]
 }'
 ></open-scd>
@@ -198,7 +198,7 @@ Within an OpenSCD core distribution, plugins are also loaded from a json file wi
 <.> Whether the plugin is enabled by default or has to be enabled in the plugins menu
 <.> Whether a document must be loaded for this plugin to be available
 <.> URL which can be a local or remote resource. 
-For a local resource, begins without a forward slash, e.g. `plugins/oscd-import-ieds/dist/oscd-import-ieds.js`. 
+For a local resource, begins without a forward slash, e.g. `plugins/oscd-update-ieds/dist/oscd-update-ieds.js`. 
 In this case what is shown is loading a plugin from the internet using the continuous integration build process.
 
 . You need to copy an entry like the above, ensure the `src` URL resolves and the plugin should be loaded when the distribution is built.

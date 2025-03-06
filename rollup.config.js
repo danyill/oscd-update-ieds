@@ -4,7 +4,7 @@ import { importMetaAssets } from '@web/rollup-plugin-import-meta-assets';
 import copy from 'rollup-plugin-copy';
 
 export default {
-  input: './oscd-import-ieds.ts',
+  input: './oscd-update-ieds.ts',
   output: {
     sourcemap: true, // Add source map to build output
     format: 'es', // ES module type export

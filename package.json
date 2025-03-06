@@ -1,13 +1,13 @@
 {
-  "name": "oscd-import-ieds",
+  "name": "oscd-update-ieds",
   "description": "Allow importing IEC 61850 IEDs into an OpenSCD project",
   "license": "Apache-2.0",
   "author": "Daniel Mulholland",
   "version": "0.0.0",
-  "main": "dist/oscd-import-ieds.js",
-  "module": "dist/oscd-import-ieds.js",
+  "main": "dist/oscd-update-ieds.js",
+  "module": "dist/oscd-update-ieds.js",
   "exports": {
-    ".": "./dist/oscd-import-ieds.js"
+    ".": "./dist/oscd-update-ieds.js"
   },
   "scripts": {
     "start": "npm run build && concurrently -k -r \"tsc -b --watch --preserveWatchOutput\" \"wds\"",
